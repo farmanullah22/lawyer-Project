@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Firm</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="header_first"> 
+        <p class="header_text1">Mon - Thu & Sat 08:30 AM - 03:00 PM. Fri 08:30 AM - 12:30 PM. Sunday CLOSED</p>
+        <p class="header_text2">Tel: 091-99999999 | Fax: 091-99999999 | <a href="http://www.SessionsCourtPeshawar.gov.pk">www.SessionsCourtPeshawar.gov.pk</a></p>
+    </div>
+    <!-- This is Header/Navbar -->
+    <header>
+        <div class="logo-title">
+            <img src="./logo.jpeg" alt="Law Firm Logo">
+            <h1>Law Firm Name</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Lawyers</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- This is Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="./Slider 1.jpg" class="slide active" alt="Slide 1">
+            <img src="./Slider 2.jpg" class="slide" alt="Slide 2">
+            <img src="./Slider 3.png" class="slide" alt="Slide 3">
+            <img src="./Slider 4.png" class="slide" alt="Slide 4">
+            <img src="./Slider 1.jpg" class="slide" alt="Slide 5">
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+        <!-- The is Hero Sectoin below the Slider -->
+    <section class="hero">
+        <h2 class="hero_heading_text">Experienced Legal Representation</h2>
+        <p>We provide expert legal advice and representation to help you succeed.</p>
+        
+        <!-- Case Result Counter -->
+        <div class="case-counter">
+            <div class="counter-box"><span id="cases-won">0</span>+ Successful Cases</div>
+            <div class="counter-box"><span id="clients">0</span>+ Satisfied Clients</div>
+            <div class="counter-box"><span id="success-rate">0</span>% Success Rate</div>
+        </div>
+
+        <!-- Lawyer Profiles -->
+        <div class="lawyer-profiles">
+            <div class="lawyer">
+                <img src="./lowyer 1.jpg" alt="Lawyer">
+                <div class="lawyer-info">John Doe - Criminal Law</div>
+            </div>
+            <div class="lawyer">
+                <img src="./lowyer 3.jpg" alt="Lawyer">
+                <div class="lawyer-info">Jane Smith - Family Law</div>
+            </div>
+        </div>
+
+        <!-- Consultation Form -->
+        <div class="consultation-form">
+            <h3>Check Your Eligibility</h3>
+            <form id="eligibility-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <button type="submit">Check Now</button>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <button class="faq-question">What services do you offer?</button>
+                <div class="faq-answer">We offer legal services in family law, business law, criminal defense, and more.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I book a consultation?</button>
+                <div class="faq-answer">You can book an appointment using our online booking system.</div>
+            </div>
+        </div>
+
+        <!-- Appointment Booking -->
+        <h3>Book an Appointment</h3>
+        <input type="date" id="appointment-date">
+
+        <!-- Live Chat Button -->
+        <a href="https://wa.me/1234567890" class="whatsapp-chat">Chat with Us</a>
+
+        <!-- Dark Mode Toggle -->
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </section>
+    
+    <!-- Vision Section -->
+
+    <section class="vision">
+        <h1 class="vision_head_text">Our Vision</h1>
+
+        <div class="vision_boxes">
+            <div class="vision_text_box">
+                <p class="vision_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora dicta dolore delectus quis ex culpa quo dolor. Ea expedita nam, eveniet dolorem animi possimus incidunt perspiciatis explicabo minus optio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed possimus quibusdam, officiis rem nam incidunt odio eligendi molestiae voluptatum aut, placeat modi. Architecto labore sequi molestias, esse laborum aspernatur distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eveniet labore animi iure obcaecati? Soluta placeat fuga nulla provident labore accusantium laudantium similique aut quia veritatis odio, accusamus molestias nesciunt.</p>
+                <p class="vision_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora dicta dolore delectus quis ex culpa quo dolor. Ea expedita nam, eveniet dolorem animi possimus incidunt perspiciatis explicabo minus optio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed possimus quibusdam, officiis rem nam incidunt odio eligendi molestiae voluptatum aut, placeat modi. Architecto labore sequi molestias, esse laborum aspernatur distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eveniet labore animi iure obcaecati? Soluta placeat fuga nulla provident labore accusantium laudantium similique aut quia veritatis odio, accusamus molestias nesciunt.</p>
+                <p class="vision_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempora dicta dolore delectus quis ex culpa quo dolor. Ea expedita nam, eveniet dolorem animi possimus incidunt perspiciatis explicabo minus optio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed possimus quibusdam, officiis rem nam incidunt odio eligendi molestiae voluptatum aut, placeat modi. Architecto labore sequi molestias, esse laborum aspernatur distinctio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam eveniet labore animi iure obcaecati? Soluta placeat fuga nulla provident labore accusantium laudantium similique aut quia veritatis odio, accusamus molestias nesciunt.</p>
+            </div>
+            <div class="vision_image_box">
+                <img src="./Vision.jpg" alt="Loading..." class="vision_image">
+            </div>
+        </div>
+    </section>
+
+
+        <div class="lawyer_image_slider">
+            
+        </div>
+
+
+    
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Law Firm. All Rights Reserved.</p>
+    </footer>
+
+
+   
+    <script src="index.js"></script>
+</body>
+
+</html>

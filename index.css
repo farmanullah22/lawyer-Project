@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    
+}
+.header_first {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #2c3e50;
+    margin: 5px 0px;
+    font-size: 12px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title img {
+    width: 80px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/*This is Slider   */
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 96%;
+    height: 90vh;
+    margin: 10px auto;
+    overflow: hidden;
+    border: 2px solid #2c3e50;
+}
+
+/* Slides */
+.slider {
+    display: flex;
+    transition: transform 3.5s ease-in-out;
+    width: 500%; /* 5 slides, each taking 100% */
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Navigation Dots */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 100%;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+
+
+
+/* THIS IS THE EXPRIENCE LEGAL REPRESENTATION */
+
+.hero {
+    padding: 30px;
+    background-color: #34495e;
+    color: white;
+    height: 90vh;
+}
+
+.case-counter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.hero_heading_text {
+    text-align: center;
+    font-size: 39px;
+}
+.counter-box {
+    background: #2c3e50;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lawyer-profiles {
+    float: right;
+    /* display: flex; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.lawyer {
+    position: relative;
+    margin-top: 10px;
+    width: 250px;
+}
+
+.lawyer img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.lawyer-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    display: none;
+}
+
+.lawyer:hover .lawyer-info {
+    display: block;
+}
+
+.faq {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.faq-question {
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding: 12px;
+    background: #34495e;
+    color: white;
+}
+
+.whatsapp-chat {
+    display: block;
+    background: green;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    width: 150px;
+    margin: 20px 0px;
+    
+}
+
+#dark-mode-toggle {
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* VISION SECTION STARTED */
+.vision {
+    max-width: 100%;
+    height: 90vh;
+    background-color: #2c3e50;
+    color: white;
+    /* margin-bottom: 50px; */
+    /* margin: 10px 0px; */
+}
+.vision_head_text {
+    text-align: center;
+    font-size: 39px;
+    font-family: sans-serif;
+    padding: 20px 0px;
+}
+.vision_boxes {
+    display: flex;
+    gap: 3rem;
+    
+}
+
+.vision_text_box {
+    width: 50%;
+    height: auto;
+}
+.vision_image_box {
+    width: 50%;
+    height: auto;
+    margin-right: 10px;
+}
+.vision_para {
+    font-family: sans-serif;
+    align-items: center;
+    margin-left: 10px;
+}
+.vision_image {
+    width: 100%;
+    height: 65vh;
+}
+
+/*  Our Team Section */
+.lawyer_image_slider {
+    max-width: 100%;
+    height: 100vh;
+    background-color: #2c3e50;
+    margin: 10px 0px;
+}
+
+
+/* Footer is Started */
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
