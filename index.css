@@ -84,12 +84,13 @@ nav a {
 }
 h2 {
     font-size: 28px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .vision_text_box {
     width: 50%;
     height: auto;
+    padding: 10px 0px;
 }
 .vision_image_box {
     width: 50%;
@@ -99,11 +100,23 @@ h2 {
 .vision_para {
     font-family: sans-serif;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 .vision_image {
     width: 100%;
     height: 65vh;
+}
+
+#vision_read_btn {
+    margin-left: 15px;
+    background: #34495e;
+    color: white;
+    padding: 5px 5px;
+    width: 170px;
+    border: none;
+}
+#vision_read_btn:hover {
+    color: #ffcc00;
 }
 
 /*  Our Team Section */
@@ -114,245 +127,328 @@ h2 {
     margin: 10px 0px;
 }
 
-/* FAQ Section */
-.faq-section {
-    padding: 50px 20px;
-    background-color: #2c3e50;
-    color: #fff;
-    margin: 5px 0px;
-}
 
-.faq-section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
 
-/* FAQ Container */
-.faq-container {
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
-}
 
-/* FAQ Item */
-.faq-item {
-    background: #fff;
-    color: #34495e;
-    margin-bottom: 10px;
-    border-radius: 8px;
+
+
+
+
+/* End of achivements container */
+
+.home-about{
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+}
+.home-about-text{
+    text-align: start;
+    padding: 20px;
+    width: 600px;
+    margin-right: 80px;
+    height: fit-content;
+}
+.home-about-text h2{
+font-size: 2.6rem;
+color: rgba(4, 4, 54, 0.719);
+margin-bottom: 20px;
+}
+.home-about-text span{
+    font-size: 3.5rem;
+    color: #fa780e;
+    margin-bottom: 20px;
+}
+.home-about-text span svg{
+    position: absolute;
+    fill: wheat;
+    color: white;
+    margin-top: -16px;
+    margin-left: -220px;
+    transform: scale(2);
+    
+}
+.home-about-text svg.visible{
+    transform: scale(1.3);
+    transition: all 0.5s ease-in-out;
+}
+.home-about-text p{
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.home-about-text button{
+    padding: 15px 30px;
+    background-color: #fa780e;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.about-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+.home-about-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    width: 600px;
+    margin-top: 250px;
+    height: fit-content;
+    animation: all 1s ease-in-out;
+}
+.about-image img{
+    position: static;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.about-image:nth-child(1).visible{
+    margin: 0 0 120px 250px;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+}
+.about-image:nth-child(2).visible{
+    margin: 0 250px 120px 0;
+    transform: rotate(-10deg);
+    transition: all 1s ease-in-out;
+}
+.about-image.visible{
+    transform: scale(1.1);
+    .about-image:nth-child(1).visible{
+        margin: 0 0 120px 250px;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+}
+.about-image:nth-child(2).visible{
+    margin: 0 250px 120px 0;
+    transform: rotate(-10deg);
+    transition: all 1s ease-in-out;
+}
+}
+/* End of home-about */
+
+
+
+
+/* FAQ Section */
+.faq-container {
+    background-color: #2c3e50;
+    margin: 5px 0px;
+    padding: 20px 0px;
+}
+.faq {
+    background: #2c3e50;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+.faq-heading-text {
+    color: white;
+    margin: 10px 15px;
 }
 
-/* FAQ Question */
+.faq-item {
+    margin-bottom: 10px;
+}
+
 .faq-question {
     width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    background: #0056b3;
-    color: #fff;
     text-align: left;
+    padding: 10px;
+    background: #34495e;
+    color: white;
+    border: none;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.faq-question .icon {
-    font-size: 20px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-/* FAQ Answer (Initially Hidden) */
-.faq-answer {
-    display: none;
-    padding: 15px;
-    background: #f1f1f1;
-    border-top: 1px solid #ccc;
-}
-
-/* Animation */
-.faq-answer p {
-    margin: 0;
     font-size: 16px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .faq-container {
-        width: 90%;
-    }
-
-    .faq-question {
-        font-size: 16px;
-    }
+.faq-answer {
+    display: none;
+    background: #ddd;
+    padding: 10px;
+    margin-top: 5px;
 }
 
-/* Success Rate Section */
-.success-rate {
-    margin: 5px 0px;
-    padding: 50px 20px;
-    background-color: #2c3e50;
-    color: #fff;
+/* Stats Section */
+.stats {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
 }
 
-.success-rate h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+.stat-heading-text {
+    margin: 10px 15px;
+    color: white;
 }
-
-/* Stats Container */
 .stats-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
 }
 
-/* Each Stat Box */
-.stat {
+.stat-item {
     background: #34495e;
-    padding: 30px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
-.stat:hover {
+.stat-item:hover {
     transform: scale(1.1);
 }
 
-.stat span {
-    font-size: 40px;
-    font-weight: bold;
+/* Service Card */
+.services {
+    padding: 30px;
+}
+
+.service-heading-text {
+    margin: 10px 15px;
+    color: white;
+}
+.service-card {
+    background: #34495e;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.cta-btn {
+    background: #3f5264;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.cta-heading-text {
+    margin: 10px 15px;
+    color: white;
+}
+
+.cta-btn:hover {
+    /* background: #0056b3; */
     color: #ffcc00;
 }
 
-.stat p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .stats-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-
-/* THIS IS THE EXPRIENCE LEGAL REPRESENTATION */
-
-.hero {
-    padding: 30px;
-    background-color: #34495e;
-    color: white;
-    height: 90vh;
-}
-
-.case-counter {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 18px;
-    margin-top: 20px;
-}
-.hero_heading_text {
-    text-align: center;
-    font-size: 39px;
-}
-.counter-box {
-    background: #2c3e50;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.lawyer-profiles {
-    float: right;
-    /* display: flex; */
-    justify-content: center;
-    gap: 20px;
-}
-
-.lawyer {
-    position: relative;
-    margin-top: 10px;
-    width: 250px;
-}
-
-.lawyer img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.lawyer-info {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    display: none;
-}
-
-.lawyer:hover .lawyer-info {
-    display: block;
-}
-
-.faq {
-    margin-top: 20px;
-    text-align: left;
-    max-width: 50%;
-}
-
-.faq-question {
-    background: #2c3e50;
-    color: white;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-}
-
-.faq-answer {
-    display: none;
-    padding: 12px;
+/* Call-to-Action */
+.cta-section {
     background: #34495e;
     color: white;
+    padding: 30px;
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    border-radius: 8px;
+}
+/* end of the faq service and cta section */
+
+
+/* Started new section Book and Appointment */
+
+/* Appointment Section */
+.appointment-section {
+    background-color: #2c3e50;
+    padding: 20px 0px;
+}
+.appointment {
+    background: #3f5264;
+    padding: 40px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white;
 }
 
-.whatsapp-chat {
+.book_app_text {
+    text-align: center;
+}
+.book_app_para {
+    text-align: center;
+}
+
+.appointment h2 {
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
     display: block;
-    background: green;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    width: 150px;
-    margin: 20px 0px;
-    
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-#dark-mode-toggle {
-    background: #e74c3c;
-    color: white;
+.input-group input {
+    width: 100%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Animated Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
     border: none;
-    cursor: pointer;
-}
-
-.dark-mode {
-    background-color: #222;
+    background: #34495e;
     color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
+.btn-submit:hover {
+    /* background: #0056b3; */
+    color: #ffcc00;
+    transform: scale(1.05);
+}
 
+.btn-submit:active {
+    transform: scale(0.95);
+}
+
+/* Confirmation Message */
+.hidden {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* end of Book Appointment section */
 
 
 /* Footer is Started */
@@ -366,9 +462,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-
-
 
 
 
