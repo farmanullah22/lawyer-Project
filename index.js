@@ -1,4 +1,15 @@
+const carousel = new bootstrap.Carousel('#myCarousel')
+const myCarouselElement = document.querySelector('#myCarousel')
 
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  touch: false
+})
+const myCarousel = document.getElementById('myCarousel')
+
+myCarousel.addEventListener('slide.bs.carousel', event => {
+  // do something...
+})
 
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         let name = document.getElementById("name").value;
@@ -122,4 +133,61 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// The lawyer card image slider
+// The successfull and expirence
+// Counter Animation Function
+const counters = document.querySelectorAll('.counter');
+const speed = 100; // Animation speed
+
+const runCounter = () => {
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target'); // Get target number
+        const increment = target / speed;
+        
+        let count = 0;
+        const updateCounter = () => {
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count);
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+};
+
+// Run counter animation when section is visible
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            runCounter();
+            observer.disconnect(); // Stops observing after first animation
+        }
+    });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector('.success-rate'));
+
+// This is for the Frequently Question
+document.addEventListener("DOMContentLoaded", function() {
+    const faqs = document.querySelectorAll(".faq-item");
+
+    faqs.forEach(faq => {
+        const question = faq.querySelector(".faq-question");
+        const answer = faq.querySelector(".faq-answer");
+        const icon = question.querySelector(".icon");
+
+        question.addEventListener("click", () => {
+            const isOpen = answer.style.display === "block";
+
+            // Close all answers first
+            document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
+            document.querySelectorAll(".icon").forEach(ic => ic.textContent = "+");
+
+            // Toggle selected answer
+            answer.style.display = isOpen ? "none" : "block";
+            icon.textContent = isOpen ? "+" : "−";
+        });
+    });
+});
